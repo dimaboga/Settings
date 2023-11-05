@@ -42,8 +42,8 @@
 		C574AFA12AF7E7F500C1B1E7 = {
 			isa = PBXGroup;
 			children = (
-				C574AFAC2AF7E7F500C1B1E7 /* Settings */,
 				C574AFAB2AF7E7F500C1B1E7 /* Products */,
+				C574AFAC2AF7E7F500C1B1E7 /* Settings */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +58,47 @@
 		C574AFAC2AF7E7F500C1B1E7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C574AFAD2AF7E7F500C1B1E7 /* AppDelegate.swift */,
-				C574AFAF2AF7E7F500C1B1E7 /* SceneDelegate.swift */,
-				C574AFB12AF7E7F500C1B1E7 /* ViewController.swift */,
-				C574AFB62AF7E7F700C1B1E7 /* Assets.xcassets */,
-				C574AFB82AF7E7F700C1B1E7 /* LaunchScreen.storyboard */,
-				C574AFBB2AF7E7F700C1B1E7 /* Info.plist */,
-				C574AFC42AF7F86600C1B1E7 /* DetailViewController.swift */,
+				C574AFC92AF7F96300C1B1E7 /* LaunchScreen */,
+				C574AFC82AF7F95700C1B1E7 /* Info&Assets */,
+				C574AFC72AF7F94F00C1B1E7 /* Controllers */,
+				C574AFC62AF7F94400C1B1E7 /* AppDelegate */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		C574AFC62AF7F94400C1B1E7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C574AFAD2AF7E7F500C1B1E7 /* AppDelegate.swift */,
+				C574AFAF2AF7E7F500C1B1E7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C574AFC72AF7F94F00C1B1E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C574AFB12AF7E7F500C1B1E7 /* ViewController.swift */,
+				C574AFC42AF7F86600C1B1E7 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C574AFC82AF7F95700C1B1E7 /* Info&Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C574AFB62AF7E7F700C1B1E7 /* Assets.xcassets */,
+				C574AFBB2AF7E7F700C1B1E7 /* Info.plist */,
+			);
+			path = "Info&Assets";
+			sourceTree = "<group>";
+		};
+		C574AFC92AF7F96300C1B1E7 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C574AFB82AF7E7F700C1B1E7 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Settings/Info.plist;
+				INFOPLIST_FILE = "Settings/Info&Assets/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -320,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Settings/Info.plist;
+				INFOPLIST_FILE = "Settings/Info&Assets/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
