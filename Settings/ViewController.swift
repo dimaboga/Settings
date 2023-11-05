@@ -80,4 +80,76 @@ extension ViewController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           let pair: (name: String, iconName: String)
+           let iconColor: UIColor
+           
+           if indexPath.section == 0 {
+               pair = firstSectionData[indexPath.row]
+               iconColor = firstSectionIconColors[indexPath.row]
+           } else if indexPath.section == 1 {
+               pair = secondSectionData[indexPath.row]
+               iconColor = secondSectionIconColors[indexPath.row]
+           } else {
+               let validIndex = min(indexPath.row, thirdSectionIconColors.count - 1)
+               pair = thirdSectionData[validIndex]
+               iconColor = thirdSectionIconColors[validIndex]
+           }
+           
+           let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+           cell.textLabel?.text = pair.name
+           cell.imageView?.image = UIImage(systemName: pair.iconName)
+           cell.imageView?.tintColor = iconColor
+           
+           if (pair.name == "Авиарежим" || pair.name == "VPN") {
+               let switchControl = UISwitch()
+               switchControl.tag = indexPath.row
+               switchControl.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+               cell.accessoryView = switchControl
+           } else {
+               cell.accessoryType = .disclosureIndicator
+           }
+           
+           return cell
+       }
+   }
+
+   extension ViewController: UITableViewDelegate {
+       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           if let cell = tableView.cellForRow(at: indexPath) {
+               let pair: (name: String, iconName: String)
+               if indexPath.section == 0 {
+                   pair = firstSectionData[indexPath.row]
+               } else if indexPath.section == 1 {
+                   pair = secondSectionData[indexPath.row]
+               } else {
+                   pair = thirdSectionData[indexPath.row]
+               }
+               print("Нажато \(pair.name)")
+               cell.setSelected(false, animated: true)
+               
+               if let detailViewController = getDetailViewController(for: pair) {
+                   navigationController?.pushViewController(detailViewController, animated: true)
+               }
+           }
+       }
+
+       private func getDetailViewController(for pair: (name: String, iconName: String)) -> DetailViewController? {
+           let detailViewController = DetailViewController()
+           detailViewController.iconName = pair.iconName
+           return detailViewController
+       }
+
+       @objc func switchValueChanged(_ sender: UISwitch) {
+           let pair: (name: String, iconName: String)
+           if sender.tag < firstSectionData.count {
+               pair = firstSectionData[sender.tag]
+           } else if sender.tag < firstSectionData.count + secondSectionData.count {
+               pair = secondSectionData[sender.tag - firstSectionData.count]
+           } else {
+               pair = thirdSectionData[sender.tag - firstSectionData.count - secondSectionData.count]
+           }
+           print("Изменен переключатель для \(pair.name) на \(sender.isOn ? "включен" : "выключен")")
+       }
+   }
     

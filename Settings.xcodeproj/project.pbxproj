@@ -13,6 +13,7 @@
 		C574AFB72AF7E7F700C1B1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C574AFB62AF7E7F700C1B1E7 /* Assets.xcassets */; };
 		C574AFBA2AF7E7F700C1B1E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C574AFB82AF7E7F700C1B1E7 /* LaunchScreen.storyboard */; };
 		C574AFC32AF7F69E00C1B1E7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C574AFC22AF7F69E00C1B1E7 /* SnapKit */; };
+		C574AFC52AF7F86600C1B1E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574AFC42AF7F86600C1B1E7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C574AFB62AF7E7F700C1B1E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C574AFB92AF7E7F700C1B1E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C574AFBB2AF7E7F700C1B1E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C574AFC42AF7F86600C1B1E7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C574AFB62AF7E7F700C1B1E7 /* Assets.xcassets */,
 				C574AFB82AF7E7F700C1B1E7 /* LaunchScreen.storyboard */,
 				C574AFBB2AF7E7F700C1B1E7 /* Info.plist */,
+				C574AFC42AF7F86600C1B1E7 /* DetailViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				C574AFB22AF7E7F500C1B1E7 /* ViewController.swift in Sources */,
 				C574AFAE2AF7E7F500C1B1E7 /* AppDelegate.swift in Sources */,
 				C574AFB02AF7E7F500C1B1E7 /* SceneDelegate.swift in Sources */,
+				C574AFC52AF7F86600C1B1E7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
